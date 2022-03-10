@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.mobile-container {
+    background-color: white;
+    width: 400px;
+    max-width: 100%;
+    margin: 2em auto;;
+    box-shadow: 0 0 15px 2px#3333331A,
+    0 0 10px 2px #3333331A ;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+header {
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+header input {
+    background-color: #eee;
+    border: none;
+    border-radius: 3px;
+    padding: .5em .5em;
+}
+
+header input:focus {
+    outline: none;
+}
+
+header button {
+    background-color: transparent;
+    font-size: 1.1em;
+    border: none;
+    color: #aaa;
+    transition: .3s;
+    margin-left: .5em;
+}
+
+header button:hover {
+    color: black;
+    transition: .3s;
+}
+
+.fav-container {
+    background-color: #f3e9e9;
+    box-shadow: 0 0 10px 2px#3333331A;;
+    display: flex;
+    margin-top: .5em;
+    padding: .5em 1em;
+    text-align: center;
+    justify-content: center;
+}
+
+.fav-meals {
+    display: flex;
+    overflow: scroll;
+    list-style: none;
+    padding: 0;
+    margin: 0 0;
+}
+
+.fav-meals::-webkit-scrollbar {
+    display: none;
+}
+
+.fav-meals::-webkit-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+.fav-meals li {
+    position: relative;
+    width: 85px;
+    margin: .2em;
+}
+
+.fav-meals li .remove-fav {
+    color: transparent;
+    background-color: transparent;
+    position: absolute;
+    border: none;
+    top: .5rem;
+    right: .5rem;
+    font-size: 1.2rem;
+    transition: .2s;
+}
+
+.fav-meals li .remove-fav:hover {
+    opacity: 1;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    transition: .2s;
+}
+
+.fav-meals li img {
+    border: 2px solid #FFDEE9;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px #3333331A;
+    object-fit: cover;
+    height: 70px;
+    width: 70px;
+    margin: .5em;
+}
+
+.fav-meals li span {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 70px;
+}
+
+img {
+    width: 100%;
+}
+
+.meals {
+    margin: 1em;
+}
+
+.meal {
+    border-radius: 8px;
+    box-shadow: 0 0 10px 2px #3333331A;
+    overflow: hidden;
+    margin: 1em 1em;
+}
+
+.meal-header {
+    height: 170px;
+}
+
+.meal-header img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.meal-body {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0em;
+}
+
+.meal-body h4 {
+    margin: .5em 1em;
+}
+
+.fav-btn {
+    margin: .5em 1em;
+    background-color: transparent;
+    border: none;
+    color: gray;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.fav-btn.active {
+    color: rgb(214, 26, 26);
+}
+
+.meal-body button:hover {
+    color: rgb(214, 26, 26);
+    transition: .3s;
+}
+
+.random {
+    position: absolute;
+    background-color: white;
+    padding: 0.2em 0.5em;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/*Popup Container*/
+.popup-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.popup-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0 2rem;
+    position: relative;
+    overflow: auto;
+    max-height: 100vh;
+    max-width: 600px;
+    width: 100%;
+}
+
+.popup .close-popup {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.meal-info h1 {
+    text-align: center;
+}

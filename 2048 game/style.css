@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F7EDE2;
+    color: #854442;
+}
+
+.game-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em;
+    align-items: left;
+    font-weight: 800;
+    font-size: 4em;
+}
+
+.game-instruction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+strong {
+    margin-left: .3em;
+}
+
+.grid {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+    width: 435px;
+    height: 435px;
+    padding: 6px 5px;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: #851e3e;
+    box-shadow: 0 0 10px 3px rgba(100, 100, 100, .5);
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+.grid div {
+    width: 100px;
+    height: 100px;
+    background-color: #dec3c3;
+    border-radius: 5px;
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-container {
+    border-radius: 5px;
+    color: white;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    padding : .5em 0;
+}
+
+.current-score {
+    background-color:#947a61;
+    margin-right: 3em;
+    padding: .5em 2em;
+    border-radius: 5px;
+}
+
+.highest-score {
+    background-color:#947a61;
+    padding: .5em 2em;
+    border-radius: 5px;
+}
+
+.score {
+    font-size: 3em;
+}
+
+#result {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.zero {
+    background-color: '#fe9c8f';
+}
+
